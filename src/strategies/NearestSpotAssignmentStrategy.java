@@ -7,6 +7,11 @@ import repositories.ParkingLotRespository;
 
 public class NearestSpotAssignmentStrategy implements SpotAssignmentStrategy{
     private ParkingLotRespository respository;
+
+    public NearestSpotAssignmentStrategy(ParkingLotRespository respository) {
+        this.respository = respository;
+    }
+
     @Override
     public Spot assignSpot(VehicleType vehicleType, Gate gate) throws NoParkingSpotAvilableFoundForVehicle, ParkingLotDoesntExists {
         ParkingLot parkingLot = respository.getParkingLotByGateId(gate.getBaseModel().getId());

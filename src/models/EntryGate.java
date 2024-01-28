@@ -5,4 +5,7 @@ public void generateTicket(){
 
 }
 
-}
+        public EntryGate(BaseModel baseModel, String gateName) {
+            super(baseModel, gateName);
+        }
+    }

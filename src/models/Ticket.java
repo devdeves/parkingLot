@@ -30,5 +30,15 @@ public class Ticket {
         this.entryTime = entryTime;
     }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Ticket{" +
+                "baseModel=" + baseModel +
+                ", vehicleNumber='" + vehicleNumber + '\'' +
+                ", assignedSpot=" + assignedSpot +
+                ", entryTime=" + entryTime +
+                '}';
+    }
+
     private Date entryTime;
 }

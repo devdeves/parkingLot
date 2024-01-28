@@ -5,6 +5,15 @@ public class Spot {
     private String spotName;
     private SpotStatus status;
     private Vehicle vehicle;
+
+    public Spot(BaseModel baseModel, String spotName, VehicleType supportedVehicleType) {
+        this.baseModel = baseModel;
+        this.spotName = spotName;
+        this.supportedVehicleType = supportedVehicleType;
+        this.status = SpotStatus.EMPTY;
+
+    }
+
     private VehicleType supportedVehicleType;
 
     public String getSpotName() {

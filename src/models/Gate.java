@@ -1,7 +1,7 @@
 package models;
 
 public class Gate {
-    private BaseModel baseModel;
+    protected BaseModel baseModel;
     private String gateName;
 
     public BaseModel getBaseModel() {
@@ -11,4 +11,10 @@ public class Gate {
     public String getGateName() {
         return gateName;
     }
+
+    public Gate(BaseModel baseModel, String gateName) {
+        this.baseModel = baseModel;
+        this.gateName = gateName;
+    }
+
 }

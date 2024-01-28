@@ -13,6 +13,15 @@ public class BaseModel {
         this.updatedAt = updatedAt;
     }
 
+    public BaseModel(int id) {
+        this.id = id;
+        this.insertedAt = new Date();
+        this.updatedAt = new Date();
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public Date getInsertedAt() {
         return insertedAt;
@@ -22,7 +31,4 @@ public class BaseModel {
         return updatedAt;
     }
 
-    public int getId() {
-        return id;
-    }
 }

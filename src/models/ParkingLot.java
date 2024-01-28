@@ -6,8 +6,15 @@ public class ParkingLot {
     private BaseModel baseModel;
     private List<Floor> floors;
 
-    private List<EntryGate>entryGates;
-    private List<ExitGate>exitGates;
+    public ParkingLot(BaseModel baseModel, List<Floor> floors, List<Gate> entryGates) {
+        this.baseModel = baseModel;
+        this.floors = floors;
+        this.entryGates = entryGates;
+     //   this.exitGates = exitGates;
+    }
+
+    private List<Gate>entryGates;
+    private List<Gate>exitGates;
 
     public BaseModel getBaseModel() {
         return baseModel;
@@ -17,11 +24,11 @@ public class ParkingLot {
         return floors;
     }
 
-    public List<EntryGate> getEntryGates() {
+    public List<Gate> getEntryGates() {
         return entryGates;
     }
 
-    public List<ExitGate> getExitGates() {
+    public List<Gate> getExitGates() {
         return exitGates;
     }
 
