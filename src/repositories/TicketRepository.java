@@ -3,6 +3,7 @@ package repositories;
 import models.BaseModel;
 import models.Spot;
 import models.Ticket;
+import models.Vehicle;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -14,9 +15,9 @@ public class TicketRepository {
     public TicketRepository(){
         map = new HashMap<>();
     }
-    public Ticket createTicket(String vehicleNumber, Spot assignedSpot, Date entryTime){
+    public Ticket createTicket(Vehicle vehicle, Spot assignedSpot, Date entryTime){
         BaseModel baseModel = new BaseModel(idSequence,new Date(),new Date());
-        Ticket ticket = new Ticket(baseModel,vehicleNumber,assignedSpot,entryTime);
+        Ticket ticket = new Ticket(baseModel,vehicle.getVehicleNumber(),assignedSpot,entryTime);
         map.put(idSequence,ticket);
         idSequence++;
         return ticket;

@@ -13,10 +13,12 @@ public class NearestSpotAssignmentStrategy implements SpotAssignmentStrategy{
     }
 
     @Override
-    public Spot assignSpot(VehicleType vehicleType, Gate gate) throws NoParkingSpotAvilableFoundForVehicle, ParkingLotDoesntExists {
+    public Spot assignSpot(Vehicle vehicle, Gate gate) throws NoParkingSpotAvilableFoundForVehicle, ParkingLotDoesntExists {
         ParkingLot parkingLot = respository.getParkingLotByGateId(gate.getBaseModel().getId());
             if (parkingLot != null) {
-                return getAvilableSpot(parkingLot,vehicleType);
+                Spot availableSpot =  getAvilableSpot(parkingLot,vehicle.getVehicleType());
+                availableSpot.asignSpot(vehicle);
+                return availableSpot;
             }
         throw new ParkingLotDoesntExists();
     }

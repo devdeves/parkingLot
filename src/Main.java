@@ -4,8 +4,10 @@ import models.*;
 import repositories.GateRepository;
 import repositories.ParkingLotRespository;
 import repositories.TicketRepository;
+import repositories.VehicleRepository;
 import services.GateService;
 import services.TicketService;
+import services.VehicleService;
 import strategies.NearestSpotAssignmentStrategy;
 import strategies.SpotAssignmentStrategy;
 
@@ -44,7 +46,10 @@ public class Main {
         GateService gateService = new GateService(gateRepository);
         SpotAssignmentStrategy spotAssignmentStrategy = new NearestSpotAssignmentStrategy(parkingLotRespository);
 
-        TicketService ticketService = new TicketService(spotAssignmentStrategy,gateService,ticketRepository);
+        VehicleRepository vehicleRepository = new VehicleRepository();
+        VehicleService vehicleService = new VehicleService(vehicleRepository);
+
+        TicketService ticketService = new TicketService(spotAssignmentStrategy,gateService,ticketRepository, vehicleService);
         TicketController ticketController = new TicketController(ticketService);
         GenerateTicketRequestDTO requestDTO = new GenerateTicketRequestDTO(1, VehicleType.CAR,"123");
         Ticket ticket = ticketController.generateTicket(requestDTO);

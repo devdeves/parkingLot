@@ -9,5 +9,5 @@ import models.VehicleType;
 
 public interface SpotAssignmentStrategy {
 
-    Spot assignSpot(VehicleType vehicleType, Gate gate) throws Exception;
+    Spot assignSpot(Vehicle vehicle, Gate gate) throws Exception;
 }

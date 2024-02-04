@@ -5,10 +5,7 @@ import java.util.Date;
 import exceptions.GateNotFoundException;
 import exceptions.NoParkingSpotAvilableFoundForVehicle;
 import exceptions.ParkingLotDoesntExists;
-import models.Gate;
-import models.Spot;
-import models.Ticket;
-import models.VehicleType;
+import models.*;
 import repositories.GateRepository;
 import repositories.TicketRepository;
 import strategies.SpotAssignmentStrategy;
@@ -18,10 +15,14 @@ public class TicketService {
     SpotAssignmentStrategy spotAssignmentStrategy;
     GateService gateService;
 
-    public TicketService(SpotAssignmentStrategy spotAssignmentStrategy, GateService gateService, TicketRepository ticketRepository) {
+    VehicleService vehicleService;
+
+    public TicketService(SpotAssignmentStrategy spotAssignmentStrategy, GateService gateService, TicketRepository ticketRepository,VehicleService vehicleService) {
         this.spotAssignmentStrategy = spotAssignmentStrategy;
         this.gateService = gateService;
         this.ticketRepository = ticketRepository;
+        this.vehicleService = vehicleService;
+
     }
 
     TicketRepository ticketRepository;
@@ -34,11 +35,11 @@ public class TicketService {
         if(gate == null){
             throw new GateNotFoundException();
         }
-
+        Vehicle vehicle = vehicleService.insertIfNotExists(vehicleNumber, vehicleType);
         Spot spot;
-        spot = spotAssignmentStrategy.assignSpot(vehicleType,gate);
+        spot = spotAssignmentStrategy.assignSpot(vehicle,gate);
         Date entryTime = new Date();
-        Ticket ticket = ticketRepository.createTicket(vehicleNumber,spot,entryTime);
+        Ticket ticket = ticketRepository.createTicket(vehicle,spot,entryTime);
         return  ticket;
     }
 }

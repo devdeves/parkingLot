@@ -31,4 +31,10 @@ public class Spot {
     public VehicleType getSupportedVehicleType() {
         return supportedVehicleType;
     }
+
+    public void  asignSpot(Vehicle vehicle){
+        this.vehicle = vehicle;
+        this.status = SpotStatus.OCCUPIED;
+
+    }
 }
