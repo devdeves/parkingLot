@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b273ddee-95db-4387-a104-6b6a828d6523" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exceptions/GateNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/VehicleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/VehicleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ParkingLot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/GenerateTicketRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dtos/GenerateTicketRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/ParkingLotDoesntExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/ParkingLotDoesntExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/EntryGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/EntryGate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ExitGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ExitGate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Spot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Spot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/GateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/GateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/ParkingLotRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ParkingLotRespository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/GateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/NearestSpotAssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/NearestSpotAssignmentStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +76,8 @@
       <workItem from="1705786614725" duration="1375000" />
       <workItem from="1706213357818" duration="1902000" />
       <workItem from="1706452074646" duration="1502000" />
-      <workItem from="1706470231046" duration="10467000" />
+      <workItem from="1706470231046" duration="10693000" />
+      <workItem from="1707067427005" duration="1985000" />
     </task>
     <servers />
   </component>
